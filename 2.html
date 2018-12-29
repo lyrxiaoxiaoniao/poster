@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>测试测试测试</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <script src="./dist/poster.min.js"></script>
+  <!-- <script src="./html2canvas.js"></script> -->
+  <!-- <div>ceshishishidhsidhsidhasidhai</div>
+  <input type="text" id="beginDate"> -->
+  <input type="file" onchange="uploadFile(this)">
+  <div id="box"></div>
+  <div id="container"></div>
+  <script>
+    console.log(poster, 'html2canvas')
+    poster('#container')
+    // function init(selector) {
+    //   var containerDom = document.querySelector(selector)
+    //   containerDom.innerHTML = `<input type="file" onchange="uploadFile(this)"><input type="file" onchange="uploadFile(this)"><div id="boxQR"></div>`
+    // }
+
+    // function uploadFile(obj) {
+    //   //获取file对象
+    //   // console.log(obj.files[0])
+    //   var file = obj.files[0];
+    //   //创建FileReader对象
+    //   var fr = new FileReader();
+    //   //判断文件的类型
+    //   if (file.type.match(/^image\//) !== null) {
+    //     //读取图片
+    //     readImage(fr, file);
+    //   } else {
+    //     alert("你上传的文件格式不是图片格式");
+    //   }
+    // }
+    // /**
+    //  * 读取图片
+    //  * @param FileReader  frObj 
+    //  * @param File  fileObj 
+    //  */
+    // function readImage(frObj, fileObj) {
+    //   frObj.onload = function () {
+    //     var img = document.createElement("img");
+    //     img.src = frObj.result;
+    //     document.querySelector("#boxQR").appendChild(img);
+    //   }
+    //   frObj.readAsDataURL(fileObj);
+    // }
+
+    // const hijack = (obj, method, fun) => {
+    //   let orig = obj[method]
+    //   obj[method] = fun(orig)
+    // }
+    // hijack(window, 'confirm', (orig) => {
+    //   console.log(orig, 'orig')
+    //   return (text) => {
+    //     alert('HELP ME PLZ!!!')
+    //     if (orig.call(this, text)) {
+    //       alert('YOU SEEMS FINE AND I AM LEAVING, GOOD BYE!')
+    //     } else {
+    //       alert('HOLD ON! I AM COMING!!')
+    //     }
+    //   }
+    // })
+
+    // $(document).ready(function () {
+    //   var url
+    //   $('#idFile').bind('change', function (e) {
+    //     url = e.target.baseURI;
+    //     console.log(e, $('#image'));
+    //     $('#image').attr('src', url)
+    //   })
+    //   console.log($('#idFile').value)
+    // })
+
+    // function changeValue(e) {
+    //   console.log(e, 'e')
+    // }
+
+
+
+    // async await 与promise是相互依赖的， async是一种异步处理解决方案
+
+    // 你可以在ajax那里用Promise对象包装一下
+
+    // const timeout = (func, ms) => {
+    //   return new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       resolve(func())
+    //     }, ms);
+    //   });
+    // }
+
+    // const one = () => {
+    //   return new Promise((resolve) => {
+    //     resolve('11111')
+    //     console.log('one')
+    //   })
+    // }
+
+    // const two = () => {
+    //   return new Promise((resolve) => {
+    //     resolve('22222')
+    //     console.log('two')
+    //   })
+    // }
+    // // 实例1
+    // const aaa = async () => {
+    //   const a = await one()
+    //   const b = await timeout(two, 3000)
+    //   console.log(a)
+    //   console.log(b)
+    // }
+    // aaa()
+
+    // // 实例2
+    // const bbb = async () => {
+    //   return await one()
+    // }
+    // bbb().then(res => {
+    //   console.log('bbb', res)
+    // }).then((res) => {
+    //   console.log('cccc', res)
+    //   setTimeout(() => {
+    //     two()
+    //   }, 3000);
+    // })
+  </script>
+</body>
+
+</html>
