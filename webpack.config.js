@@ -18,14 +18,29 @@ const modules = {
                 presets: ['@babel/preset-env']
             }
         }
+    }, {
+        test: /\.css$/,
+        exclude: /node_modules/, // 优化处理加快速度
+        use: [
+            "style-loader",
+            "css-loader?modules&localIdentName=[name]-[hash:base64:5]",
+            {
+                loader: "postcss-loader",
+                options: {
+                    plugins: [
+                        require("autoprefixer") /*在这里添加*/
+                    ]
+                }
+            }
+        ]
     }]
 };
 
 module.exports = [{
-    entry: './poster.js',
+    entry: './showPoster.js',
     output: {
-        filename: 'poster.min.js',
-        library: 'poster',
+        filename: 'showPoster.min.js',
+        library: 'showPoster',
         libraryTarget: 'umd'
     },
     module: modules,

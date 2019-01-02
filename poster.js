@@ -21,8 +21,8 @@ const uploadFile = function (obj) {
 }
 /**
  * 读取图片
- * @param FileReader  frObj 
- * @param File  fileObj 
+ * @param FileReader  frObj
+ * @param File  fileObj
  */
 const readImage = function (frObj, fileObj) {
     frObj.onload = function () {
