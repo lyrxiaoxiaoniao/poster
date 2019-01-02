@@ -1,3 +1,51 @@
-.title{
+.title {
     color: red;
+}
+
+.container {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.upload {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.upload-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #d0cece;
+    padding: 3px 5px;
+}
+
+.upload-button input {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+}
+
+.poster {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    max-height: 1280px;
+}
+
+.poster-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.poster-qr {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
