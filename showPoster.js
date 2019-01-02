@@ -63,7 +63,7 @@ var html2canvas = require("./js/html2canvas.js");
         // 获取图片函数
         var uploadFile = function (obj, type) {
             //获取file对象
-            console.log(obj.files[0])
+            // console.log(obj.files[0])
             var file = obj.files[0];
             //创建FileReader对象
             var fr = new FileReader();
@@ -94,7 +94,8 @@ var html2canvas = require("./js/html2canvas.js");
         }
         var downloadPoster = function () {
             html2canvas(document.querySelector("#capture"), {
-                scale: 2
+                scale: 2,
+                // logging: false
             }).then(canvas => {
                 el.appendChild(canvas)
             });
